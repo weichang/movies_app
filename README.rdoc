@@ -1,0 +1,10 @@
+== README
+
+電影介紹 web app
+
+Ruby -2.0
+Rails- 4.1.8
+
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'

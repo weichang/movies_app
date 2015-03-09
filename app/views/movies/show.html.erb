@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>電影名稱:</strong>
+  <%= @movie.name %>
+</p>
+<p>
+  <strong>類型:</strong>
+  <%= @movie.mtype %>
+</p>
+
+<p>
+  <strong>片長:</strong>
+  <%= @movie.length %>
+</p>
+
+<p>
+  <strong>上映日期:</strong>
+  <%= @movie.playdate %>
+</p>
+
+<p>
+  <strong>劇情介紹:</strong>
+  <%= raw @movie.content %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>

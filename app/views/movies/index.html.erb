@@ -1,0 +1,57 @@
+<div class="jumbotron">
+      <div class="container">
+        <h1></h1>
+        <p></p>
+        <p><a class="btn btn-primary btn-lg active" href="/movies/new" role="button">Create Movie &raquo;</a></p>
+      </div>
+</div>
+
+
+
+<% @movies.each do |movie| %>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5">
+    <%= link_to( (image_tag movie.image , :class =>"img-thumbnail featurette-image img-responsive ") , movie )%>
+
+  </div>
+  <div class="col-md-5">
+    <h2 class="featurette-heading"><%=movie.name%> </h2>
+    <p class="lead"><%=raw movie.content %> </p>
+  </div>
+  <!--<%= link_to '刪除', movie, method: :delete, data: { confirm: 'Are you sure?' } %>-->
+</div>
+
+ <% end %>
+<!--<table class="table">
+  <thead>
+    <tr>
+      <th>電影名稱</th>
+      <th>圖片</th>
+      <th>類型</th>
+      <th>片長</th>
+      <th>上映日期</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= image_tag movie.image %></td>
+        <td><%= movie.mtype %></td>
+        <td><%= movie.length %></td>
+        <td><%= movie.playdate %></td>
+        <td><%= link_to 'Show', movie %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
+        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>-->
+
+<br>
+

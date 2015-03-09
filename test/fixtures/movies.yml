@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mtype: MyString
+  length: MyString
+  playdate: 2015-01-28
+
+two:
+  name: MyString
+  mtype: MyString
+  length: MyString
+  playdate: 2015-01-28

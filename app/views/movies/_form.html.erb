@@ -1,0 +1,41 @@
+<%= form_for(@movie) do |f| %>
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name ,'電影名稱' %><br>
+    <%= f.text_field :name , :class => 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :image ,'電影劇照' %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :mtype ,'類型' %><br>
+    <%= f.text_field :mtype , :class => 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :length,'片長' %><br>
+    <%= f.text_field :length , :class => 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :content ,'劇情介紹'%><br>
+    <%= f.cktext_area  :content ,:cols => 40 , :class => 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :playdate ,'上映日期'%><br>
+    <%= f.date_select :playdate  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
