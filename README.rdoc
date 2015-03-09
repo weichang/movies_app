@@ -5,6 +5,6 @@
 Ruby -2.0
 Rails- 4.1.8
 
-gem 'ckeditor'
-gem 'carrierwave'
-gem 'mini_magick'
+1 Scaffold (CRUD)
+2 編輯器 - ckeditor
+3 上傳圖片 - carrierwave
